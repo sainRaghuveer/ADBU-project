@@ -1,5 +1,3 @@
-'use client'
-
 import {
   Box,
   Flex,
@@ -17,7 +15,7 @@ import {
   useColorMode,
   Center,
 } from '@chakra-ui/react'
-import { MoonIcon, SunIcon } from '@chakra-ui/icons'
+import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 
 
 const NavLink = (props) => {
