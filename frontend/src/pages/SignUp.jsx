@@ -57,6 +57,7 @@ export default function SignUp() {
             status: 'warning',
             duration: 3000,
             isClosable: true,
+            position:"top"
           })
         }
       }
@@ -69,6 +70,7 @@ export default function SignUp() {
         status: 'error',
         duration: 3000,
         isClosable: true,
+        position:"top"
       })
     } finally {
       setLoading(false);
