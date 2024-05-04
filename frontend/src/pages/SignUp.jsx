@@ -33,7 +33,7 @@ export default function SignUp() {
   const handleSignUp = async () => {
     try {
       setLoading(true)
-      let promise = await fetch("http://localhost:8080/api/signup", {
+      let promise = await fetch("https://adbu-project.onrender.com/api/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

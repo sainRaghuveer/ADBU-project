@@ -16,6 +16,7 @@ import {
   Center,
 } from '@chakra-ui/react'
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
+import { useNavigate } from "react-router-dom";
 
 
 const NavLink = (props) => {
@@ -39,7 +40,13 @@ const NavLink = (props) => {
 
 export default function Navbar() {
   const { colorMode, toggleColorMode } = useColorMode()
-  const { isOpen, onOpen, onClose } = useDisclosure()
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const navigate = useNavigate();
+
+  const handleSignUp = () => {
+    navigate("/signup")
+  }
+
   return (
     <>
       <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
@@ -51,6 +58,7 @@ export default function Navbar() {
               <Button onClick={toggleColorMode}>
                 {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
               </Button>
+              <Button onClick={handleSignUp}>Signup</Button>
 
               <Menu>
                 <MenuButton
