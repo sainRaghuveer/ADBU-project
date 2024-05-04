@@ -7,7 +7,7 @@ require('dotenv').config();
 
 
 const userSignup = async (req, res) => {
-    let { name, email, password, gender } = req.body;
+    let { firstName, lastName, email, password } = req.body;
 
     try {
         const userExist = await userModel.find({ email });
@@ -19,7 +19,7 @@ const userSignup = async (req, res) => {
                     res.status(500).send({ "message": "error in bcrypt" });
                 } else {
                     try {
-                        const user = new userModel({ name, email, password: hash, gender });
+                        const user = new userModel({ firstName, lastName, email, password:hash });
                         await user.save();
 
                         res.status(200).send("User registered successfully");
