@@ -52,7 +52,7 @@ const userLogin = async (req, res) => {
                 }
             });
         } else {
-            res.status(400).send("User does not exist");
+            res.status(400).send("User does not exist..");
         }
 
     } catch (error) {
