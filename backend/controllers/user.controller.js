@@ -5,7 +5,6 @@ const jwt = require("jsonwebtoken");
 require('dotenv').config();
 
 
-
 const userSignup = async (req, res) => {
     let { firstName, lastName, email, password } = req.body;
 
@@ -33,7 +32,6 @@ const userSignup = async (req, res) => {
                 }
             })
         }
-
     } catch (error) {
         console.log(error)
     }
