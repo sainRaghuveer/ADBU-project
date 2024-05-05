@@ -11,7 +11,7 @@ const userSignup = async (req, res) => {
     try {
         const userExist = await userModel.find({ email });
         if (userExist.length) {
-            res.status(200).send({ message: "User is already exists" });
+            res.status(200).send({ message: "User already exists" });
         } else {
             bcrypt.hash(password, 5, async (err, hash) => {
                 if (err) {
